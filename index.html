@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check" class="checkbox">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <h1 class="nav_head">ReyJay</h1>
+        <ul>
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About</a></li>
+            <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
+            <li><a href="#preferences" onclick="closeMenu()">Preferences</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            <a href="#contact"><button class="contact_btn" onclick="closeMenu()">Contact Me</button></a>
+        </ul>
+</nav>
+    
+    <section id="home" class="home">
+        <img src="1.jpeg" alt="width=450px" height="400px">
+        <div class="description">
+            <h1>Hello I'm <br><span>ReyJay </span></h1>
+            <h2>I'm a Future <span>Web Developer...</span></h2>
+            <p > As a student, every day is an opportunity to grow and expand my knowledge. I face new challenges, tackle complex problems, and learn from every mistake I make. With each coding lesson and every project, I become better equipped to build the future I dream of. I know that success doesn’t come easy, but the journey is worth every step.<br><br>
+                "Learning may be difficult at times, but with perseverance, every challenge becomes an opportunity to shine."
+            </p>   
+            <div class="font">
+                <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://web.facebook.com/reyjay.pagasian.9" target="_blank" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="tel:+9709175828" title="Phone">
+                    <i class="fas fa-phone"></i>
+                </a>
+            
+        </div>
+    </section>
+
+
+    <section id="about" class="about">
+        <div class="about_section">
+            <h1>About<span>Me</span></h1>
+            <h2>Web<span>Developer!</span></h2>
+            <p>
+                I'm ReyJay Belono-ac from Olingan, Dipolog City, Zamboanga del Norte. I am deeply passionate about web development and love creating digital experiences that are not only functional but also visually appealing. I enjoy the process of building websites from scratch, and every line of code I write is an opportunity to learn something new.<br><br> 
+                My goal is to continue developing my skills and knowledge in web development, focusing on building responsive, user-friendly sites that make a positive impact on users. I believe in using technology to create solutions and make a difference in the digital world.
+
+                <span id="more-text" style="display: none;">
+                    <br><br>Every day as a student and an aspiring web developer, I remind myself that success is not an overnight achievement. It takes consistent effort, a willingness to fail, and the courage to keep going. In this journey, every small milestone is worth celebrating. With hard work and determination, I know that I will not only reach my goals but exceed them. The challenges I face today are shaping me into the developer I will become tomorrow.
+
+
+                    <br><br>Through each academic challenge, I remind myself that no journey worth pursuing comes without its hurdles. It is through persistence, resilience, and a strong belief in myself that I will not only succeed in my studies but also in my future career as a web developer. Each day, I get one step closer to my goals, and I am determined to make the most of this time as a student to build a solid foundation for my career.<br><br>
+                    "The hard work I put in today will shape the successful developer I will be tomorrow."
+
+
+  
+                </span>
+            </p>
+            <button class="about_btn" onclick="toggleReadMore()">Read More..</button>
+        </div>
+        <div class="about_photo">
+            <img src="2.jpeg" alt="" width="420px" height="360px">
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="gallery-header">My <span>Photos</span></div>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="1.jpeg" alt="Photo 5">
+            </div>
+            <div class="gallery-item">
+                <img src="2.jpeg" alt="Photo 6">
+            </div>
+            <div class="gallery-item">
+                <img src="3.jpeg" alt="Photo 7">
+            </div>
+            <div class="gallery-item">
+                <img src="4.jpeg" alt="Photo 8">
+            </div>
+        </div>
+        <a href="gallery.html">
+            <button class="see-more-btn">See More Photos</button>
+        </a>
+    </section>
+
+    <section class="preferences" id="preferences">
+    <div class="container">
+        <div class="hobbies-section">
+            <h1 class="section-title">My<span>Hobbies</span></h1>
+            <div class="hobby-grid">
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <img src="2.jpeg">
+                    </div>
+                    <div class="hobby-content">
+                        <h2>Palaranan</h2>
+                        <p>Palaranan , Manukan Zamboanga Del Norte.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <img src="3.jpeg">
+                    </div>
+                    <div class="hobby-content">
+                        <h2>Olingan</h2>
+                        <p>Olingan , Dipolog City Zamboanga Del Norte.</p>
+                    </div>
+                </div>
+
+            
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <img src="4.jpeg">
+                    </div>
+                    <div class="hobby-content">
+                        <h2>Mcdonald's</h2>
+                        <p>Mcdonald's Dipolog City.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <img src="5.jpeg">
+                    </div>
+                    <div class="hobby-content">
+                        <h2>Olingan</h2>
+                        <p>Olingan , Dipolog City Zamboanga del Norte.</p>
+                    </div>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <img src="6.jpeg">
+                    </div>
+                    <div class="hobby-content">
+                        <h2>Katipunan Church</h2>
+                        <p>Katipunan Church , Zamboanga del Norte.</p>
+                    </div>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <img src="7.jpeg">
+                    </div>
+                    <div class="hobby-content">
+                        <h2>Plaza</h2>
+                        <p>Plaza Katipunan , Zamboanga del Norte.</p>
+                    </div>
+               
+                    
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>   
+</section>
+<div class="contact-section" id="contact">
+    <h1>Contacts</h1>
+    <div class="ohaha">
+        <p>Use my contact form for all information requests or<br> contact me directly using the contact information<br> below.
+            <br><br>Feel free to get in touch with me via email or phone.
+        </p>
+    </div>
+
+    <div class="contact-cards">
+        <div class="card">
+            <i class="fas fa-envelope icon"></i>
+            <h3>Email</h3>
+            <p>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=reyjaybelonoac21@gmail.com" target="_blank">
+                    reyjaybelonoac21@gmail.com
+                </a>
+            </p>
+        </div>
+        <div class="card">
+            <i class="fas fa-phone icon"></i>
+            <h3>Phone</h3>
+            <p>
+                <a href="tel:+9709175828">Call: +9709175828</a><br>
+                <a href="sms:+9709175828">Message: +9709175828</a>
+            </p>
+        </div>
+        <div class="card">
+            <i class="fas fa-map-marker-alt icon"></i>
+            <h3>Address</h3>
+            <p>Olingan, Dipolog City, ZN</p>
+        </div>
+    </div>
+</div>
+      <!-- Back to Top Button -->
+<div id="back-to-top" class="back-to-top">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+</div>
+      <script>
+    function closeMenu() {
+        document.getElementById('check').checked = false; // Uncheck the checkbox to hide the menu
+    }
+</script>
+<script>
+    function toggleReadMore() {
+        const moreText = document.getElementById("more-text");
+        const button = document.querySelector(".about_btn");
+
+        if (moreText.style.display === "none" || moreText.style.display === "") {
+            moreText.style.display = "inline"; // Show the hidden content
+            button.textContent = "Read Less.."; // Change button text
+        } else {
+            moreText.style.display = "none"; // Hide the content
+            button.textContent = "Read More.."; // Reset button text
+        }
+    }
+</script>
+<script>
+    const backToTopButton = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) { // Show the button after scrolling 200px
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+</script>
+</body>
+</html>
