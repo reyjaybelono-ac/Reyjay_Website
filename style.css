@@ -23,7 +23,7 @@ nav {
     top: 0;
     width: 100%;
     z-index: 1000;
-    
+    border-radius: 0 0 15px 15px;
 }
 
 .nav_head {
@@ -91,6 +91,7 @@ ul li a:hover {
     background-color: black;
     z-index: 1000;
     padding: 10px 0;
+    border-radius: 0 0 15px 15px;
 }
 
 /* Responsive Navbar */
@@ -154,6 +155,51 @@ ul li a:hover {
     }
 }
 
+/* Scroll Animation - Fade In from Bottom */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* home section */
 
 .home{
@@ -162,9 +208,12 @@ ul li a:hover {
     display: flex;
     justify-content: space-around;
     gap: 5rem;
+    border-radius: 0 0 20px 20px;
+    animation: fadeInUp 0.8s ease;
 }
 .description{
     padding-top: 20px;
+    animation: fadeInLeft 0.8s ease 0.2s both;
 }
 .description h1{
     font-size: 20px;
@@ -237,7 +286,7 @@ ul li a:hover {
     box-sizing: 0px 0px 40px #FF9C8F;
     filter: brightness(1.1);
     transition: .4s ease-in-out;
-    animation: animate 2.5s ease-in-out forwards infinite;
+    animation: animate 2.5s ease-in-out forwards infinite, fadeInRight 0.8s ease 0.2s both;
     }
     .home img:hover{
         box-shadow: 0px 0px 50px #3498db; /* Changed to blue */
@@ -266,6 +315,7 @@ ul li a:hover {
     .home{
         grid-template-columns: 1fr;
         flex-wrap: wrap;
+        border-radius: 0 0 20px 20px;
     }    
     .description{
         margin-left: -4rem;
@@ -295,6 +345,8 @@ ul li a:hover {
     gap: 60px;
     padding-top: 100px;
     color: white;
+    border-radius: 20px;
+    animation: fadeInUp 0.8s ease;
 }
 .about_photo img{
     background-color: #FF9C8F;
@@ -317,6 +369,7 @@ ul li a:hover {
 }
 .about_section{
     margin-bottom: 30px;
+    animation: fadeInLeft 0.8s ease;
 }
 .about_section h1{
     font-size: 50px;
@@ -339,8 +392,13 @@ ul li a:hover {
     box-shadow: 0px 0px 15px #3498db; /* Changed to blue */
     border: none;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
+.about_btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px #3498db;
+}
 
 /* responsive about section */
 
@@ -350,6 +408,7 @@ ul li a:hover {
         margin: 0;
         padding: 50px 20px;
         position: relative;
+        border-radius: 20px;
     }
     .about_section{
         margin: 0;
@@ -382,6 +441,11 @@ ul li a:hover {
 
 
 /* services section */
+.gallery {
+    border-radius: 20px;
+    animation: fadeInUp 0.8s ease;
+}
+
 .photo {
     justify-content: center;
 }
@@ -405,6 +469,7 @@ h1.photo span{
     margin-top: 20px; /* Add spacing above the gallery */
     justify-content: flex-start; /* Align items to the top */
     padding: 20px; /* Add padding inside the gallery */
+    border-radius: 20px;
 }
 
 .gallery-header {
@@ -414,16 +479,18 @@ h1.photo span{
     text-align: center; /* Center-align the header */
     margin-bottom: 20px; /* Add spacing below the header */
     color: #3498db; /* Changed to blue */
+    animation: slideInDown 0.6s ease;
 }
 
 .gallery-container {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     justify-content: center; /* Center-align items horizontally */
-    align-items: flex-start; /* Align items to the top */
+    align-items: center; /* Center items vertically */
     gap: 20px; /* Add spacing between items */
     width: 100%; /* Full width */
     padding: 10px; /* Add padding inside the container */
+    margin: 0 auto;
 }
 
 .gallery-container img {
@@ -433,11 +500,13 @@ h1.photo span{
     border-radius: 15px; /* Add rounded corners */
     margin: 10px; /* Add spacing between images */
     cursor: pointer; /* Make the images clickable */
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    animation: fadeInUp 0.8s ease;
 }
 
 .gallery-container img:hover {
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    transform: scale(1.05) translateY(-5px); /* Slightly enlarge and lift the image on hover */
+    box-shadow: 0px 8px 20px rgba(52, 152, 219, 0.4);
 }
 
 .img-container {
@@ -549,11 +618,13 @@ h1.photo span{
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
     display: inline-block; /* Ensure proper sizing */
+    margin-top: 20px;
+    animation: fadeInUp 0.8s ease;
 }
 
 .see-more-btn:hover {
     background-color: #2ecc71; /* Optional hover color */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    transform: scale(1.05) translateY(-3px); /* Slightly enlarge and lift the button on hover */
 }
 .section {
     flex: 1; /* Allow sections to grow equally */
@@ -567,6 +638,8 @@ h1.photo span{
     background: var(--bg-color); /* Background color */
     color: var(--text-color); /* Text color */
     padding: 40px 0; /* Increased padding for better spacing */
+    border-radius: 20px;
+    animation: fadeInUp 0.8s ease;
 }
 
 .preferences h1,
@@ -663,6 +736,8 @@ body {
     margin-bottom: 50px;
     text-align: center;
     padding: 50px 20px;
+    border-radius: 20px;
+    animation: fadeInUp 0.8s ease;
   }
   
   .contact-section h1 {
@@ -678,6 +753,7 @@ body {
     height: 70px;
     background-color: #ccc;
     margin: 10px auto 30px auto;
+    border-radius: 15px;
   }
   
   .contact-cards {
@@ -691,11 +767,12 @@ body {
     background-color: #ccd2c4;
     color: #000;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     width: 300px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    animation: fadeInUp 0.8s ease;
 }
 
 .card:hover {
@@ -744,6 +821,7 @@ body {
 
 .back-to-top:hover {
     background-color: #2ecc71; /* Change color on hover */
+    transform: scale(1.1) translateY(-5px);
 }
 
 .back-to-top.show {
@@ -758,7 +836,7 @@ body {
     background-color: #FF9C8F; /* Button background color */
     color: white; /* Text color */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
     font-size: 16px;
@@ -808,6 +886,7 @@ body {
         align-items: center;
         padding: 120px 20px 40px 20px;
         gap: 2rem;
+        border-radius: 0 0 20px 20px;
     }
     .description {
         margin-left: 0;
@@ -819,6 +898,7 @@ body {
         margin: 40px 10px;
         gap: 30px;
         padding-top: 60px;
+        border-radius: 20px;
     }
     .about_section {
         margin-left: 0;
@@ -835,6 +915,7 @@ body {
     nav {
         flex-direction: row;
         padding: 10px 10px;
+        border-radius: 0 0 15px 15px;
     }
     .nav_head {
         font-size: 24px;
@@ -842,6 +923,7 @@ body {
     .home {
         padding: 100px 10px 30px 10px;
         gap: 1.5rem;
+        border-radius: 0 0 20px 20px;
     }
     .home img {
         width: 90vw;
@@ -863,6 +945,7 @@ body {
         margin: 0;
         padding: 40px 15px;
         position: relative;
+        border-radius: 20px;
     }
     .about_section {
         padding: 0;
@@ -905,6 +988,9 @@ body {
         max-width: 350px;
         margin: 0 auto;
     }
+    .contact-section {
+        border-radius: 20px;
+    }
 }
 
 /* Hobbies Section - Moved to end after contact section */
@@ -938,6 +1024,7 @@ body {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.8s ease;
 }
 
 .hobby-card:hover {
@@ -949,7 +1036,7 @@ body {
     width: 100%; /* Make the image container responsive */
     height: 300px; /* Set a fixed height for the image container */
     overflow: hidden; /* Ensure images don't overflow the container */
-    border-radius: 10px; /* Optional: Add rounded corners */
+    border-radius: 15px; /* Optional: Add rounded corners */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for better visibility */
 }
 
